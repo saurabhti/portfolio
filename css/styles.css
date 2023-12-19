@@ -3836,6 +3836,10 @@
  .s-about__content-bottom .btn--download:focus svg path {
      fill: white;
  }
+
+ .signature-wrapper {
+    text-align: center;
+ }
  
  /* ------------------------------------------------------------------- 
   * responsive:
