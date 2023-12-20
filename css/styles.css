@@ -3891,7 +3891,7 @@
  .s-resume {
      background-color: white;
      padding-top: calc(6 * var(--space));
-     padding-bottom: var(--vspace-4);
+     padding-bottom: var(--vspace-2);
  }
  
  .s-resume__section {
@@ -3968,7 +3968,7 @@
   * ------------------------------------------------------------------- */
  .s-portfolio {
      background-color: var(--color-gray-1);
-     padding-top: calc(6 * var(--space));
+     padding-top: calc(3 * var(--space));
      padding-bottom: var(--vspace-5);
  }
  
@@ -3996,9 +3996,10 @@
      background-color: white;
      position: relative;
      overflow: hidden;
-     border-radius: 16px;
+     border-radius: 32px;
      border: 7px solid white;
      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+     transition: all 300ms ease;
  }
  
  .folio-item__thumb::before {
@@ -4019,7 +4020,7 @@
      transition: all, .5s;
  }
  
- .folio-item__thumb::after {
+ /* .folio-item__thumb::after {
      z-index: 1;
      content: "Check it out!!!";
      font-family: var(--font-2);
@@ -4028,8 +4029,6 @@
      color: white;
      display: block;
      line-height: 32px;
-     /* margin-left: -16px; */
-     /* margin-top: -16px; */
      text-align: center;
      opacity: 0;
      visibility: hidden;
@@ -4040,7 +4039,7 @@
      position: absolute;
      left: 50%;
      top: 50%;
- }
+ } */
  
  .folio-item img {
      display: block;
@@ -4049,6 +4048,25 @@
      transition: all, .5s;
      height: 290px;
      width: 330px;
+     object-fit: cover;
+ }
+
+ .project-about {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    bottom: -100%;
+    z-index: 10;
+    transition: all 400ms ease;
+    padding: 0 25px;
+    margin: 0 !important;
+    width: 100%;
+    height: 100%;
+    text-align: center;
  }
  
  /* on hover
@@ -4068,6 +4086,10 @@
  .folio-item:hover .folio-item__thumb img {
      -webkit-transform: scale(1.1);
      transform: scale(1.1);
+ }
+
+ .folio-item__thumb:hover .project-about {
+    bottom: 0;
  }
  
  /* ------------------------------------------------------------------- 
